@@ -3,5 +3,7 @@ uvicorn
 sqlalchemy
 starlette
 pydantic
-python-decouple
 psycopg2
+PyJWT
+python-decouple
+decouple
