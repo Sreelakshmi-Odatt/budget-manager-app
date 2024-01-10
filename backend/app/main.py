@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from .config import ALLOWED_HOSTS
 from .routers import user
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -7,7 +7,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=ALLOWED_HOSTS or ["*"],
+    allow_origins=ALLOWED_HOSTS or ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
