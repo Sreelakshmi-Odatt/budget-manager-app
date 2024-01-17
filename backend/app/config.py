@@ -5,7 +5,6 @@ from starlette.datastructures import CommaSeparatedStrings, Secret
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-
 API_PREFIX = "/api"
 
 JWT_TOKEN_PREFIX = "Authorization"
@@ -22,9 +21,6 @@ ALLOWED_HOSTS: List[str] = config(
     default=[],
 )
 
-
 DATABASE_URL = 'postgresql://postgres:1234@localhost:5432/budget_management_db'
 engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush = False, bind=engine)
-
-
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -3,9 +3,9 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class EarningCategory(Base):
+class ExpenseCategory(Base):
 
-    tableName = "EarningCategory"
+    tableName = "ExpenseCategory"
 
-    earning_id = Column(Integer, primary_key=True)
-    earning_name = Column(String, unique=True)
+    expense_id = Column(Integer, primary_key=True)
+    expense_name = Column(String, unique=True)
