@@ -13,7 +13,7 @@ router = APIRouter(
     prefix="/users",
     tags=["users"],
     dependencies=[Depends(JWTBearer())],
-    responses={404: {"description": "Not found"}},
+    responses={404: {"message": "Hello"}},
 )
 
 
